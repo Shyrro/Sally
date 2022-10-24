@@ -1,0 +1,14 @@
+{
+  "name": "@sally/s-tag",
+  "version": "0.0.0",
+  "main": "./dist/s-tag.js",
+  "module": "./dist/s-tag.js",
+  "svelte": "./dist/s-tag.js",
+  "author": "Shyrro <zsahmane@gmail.com>",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "pnpm check && vite build",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  }
+}
