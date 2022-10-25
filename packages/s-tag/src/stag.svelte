@@ -2,4 +2,4 @@
   let hello: string = 'Hello there';
 </script>
 
-<div >Test component : {hello}</div>
+<div class="bg-red" >Test component : {hello}</div>

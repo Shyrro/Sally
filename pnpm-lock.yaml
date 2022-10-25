@@ -35,6 +35,14 @@ importers:
   packages/s-tag:
     specifiers: {}
 
+  packages/test-unocss:
+    specifiers:
+      '@sally/s-tag': '*'
+      '@unocss/runtime': ^0.46.0
+    dependencies:
+      '@sally/s-tag': link:../s-tag
+      '@unocss/runtime': 0.46.0
+
   playground:
     specifiers:
       '@histoire/plugin-svelte': ^0.11.5

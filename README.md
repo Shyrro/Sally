@@ -1,2 +1,2 @@
 # Sally
-A Svelte component library that is fully-accessible and fully-customizable ( WIP )
+A Svelte component library that is fully-accessible and fully-customizable using unocss ( WIP )
