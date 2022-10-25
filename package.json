@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "build": "nx run-many --target=build",
-    "dev": "nx run-many --target=dev"
+    "dev": "nx run-many --target=dev",
+    "histoire:dev": "nx run playground:dev"
   },
   "private": true,
   "devDependencies": {
@@ -18,6 +19,8 @@
     "svelte-preprocess": "^4.10.7",
     "tslib": "^2.4.0",
     "typescript": "^4.6.4",
-    "vite": "^3.1.0"
+    "vite": "^3.1.0",
+    "@unocss/core": "^0.46.0",
+    "unocss": "^0.46.0"
   }
 }

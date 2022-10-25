@@ -1,5 +1,5 @@
 <script lang="ts">
-    let hello: string= 'Hello there'
+  let hello: string = 'Hello there';
 </script>
 
-<div style="color:red ;">Test component : {hello}</div>
+<div class="bg-red">Test component : {hello}</div>
