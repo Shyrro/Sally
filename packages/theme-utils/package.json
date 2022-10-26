@@ -1,0 +1,13 @@
+{
+  "name": "@sally/theme-utils",
+  "version": "0.0.0",
+  "description": "Utils for theme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "test": "vitest run"
+  }
+}
