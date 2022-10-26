@@ -4,13 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "story": "histoire dev",
+    "dev": "histoire dev",
     "build": "histoire build",
     "preview": "histoire preview"
   },
   "dependencies": {
-    "@sally/s-tag": "*",
-    "@unocss/runtime": "^0.46.0"
+    "@sally/s-tag": "*"
   },
   "devDependencies": {
     "@histoire/plugin-svelte": "^0.11.5",
