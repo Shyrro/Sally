@@ -1,3 +1,7 @@
+---
+to: packages/<%=h.changeCase.paramCase(name)%>/vite.config.ts
+---
+
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import sveltePreprocess from 'svelte-preprocess';
@@ -6,7 +10,7 @@ const globals = {
   'svelte/internal': 'svelte/internal',
   'svelte': 'svelte',
 };
-// https://vitejs.dev/config/
+
 export default defineConfig({
   plugins: [
     svelte({ preprocess: sveltePreprocess() }),
@@ -14,8 +18,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'index.ts',
-      name: 'STag',
-      fileName: 's-tag',
+      name: '<%=h.changeCase.pascalCase(name)%>',
+      fileName: '<%=h.changeCase.paramCase(name)%>',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
