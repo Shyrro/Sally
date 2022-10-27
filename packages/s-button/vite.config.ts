@@ -6,7 +6,7 @@ const globals = {
   'svelte/internal': 'svelte/internal',
   'svelte': 'svelte',
 };
-// https://vitejs.dev/config/
+
 export default defineConfig({
   plugins: [
     svelte({ preprocess: sveltePreprocess() }),
@@ -14,8 +14,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'index.ts',
-      name: 'STag',
-      fileName: 's-tag',
+      name: 'SButton',
+      fileName: 's-button',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

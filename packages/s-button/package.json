@@ -1,17 +1,14 @@
 {
-  "name": "@sally/s-tag",
+  "name": "@sally/s-button",
   "version": "0.0.0",
-  "main": "./dist/s-tag.umd.js",
-  "module": "./dist/s-tag.js",
-  "svelte": "./dist/s-tag.js",
+  "main": "./dist/s-button.umd.cjs",
+  "module": "./dist/s-button.js",
+  "svelte": "./dist/s-button.js",
   "author": "Shyrro <zsahmane@gmail.com>",
   "type": "module",
   "scripts": {
     "dev": "vite build --watch",
     "build": "pnpm check && vite build",
     "check": "svelte-check --tsconfig ./tsconfig.json"
-  }, 
-  "dependencies": {
-    "@sally/theme-utils": "^0.0.0"
   }
 }
