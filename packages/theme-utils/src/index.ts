@@ -14,7 +14,6 @@ export const formatStyles = (styles) => {
     } else {
       transformedStyles[value] = styles[value]
     }
-    
   })
 
   return transformedStyles
@@ -26,7 +25,6 @@ export const extractComponentStyles = (
 ) => {
 
   const styles = formatStyles(themeObject.components[componentName].baseStyles);
-  console.log(styles)
 
   return styles
 };

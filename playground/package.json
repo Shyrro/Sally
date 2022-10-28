@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "histoire dev",
+    "serve": "histoire dev",
     "build": "histoire build",
     "preview": "histoire preview"
   },
