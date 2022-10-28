@@ -10,10 +10,38 @@ describe('extract styles', () => {
     };
 
     // Act
-    const styles = extractComponentStyles('Button', theme);
+    const styles: any = extractComponentStyles('Button', theme);
 
     // Assert
     expect(styles.color).toBe('green');
     expect(styles.bg).toBe('red');
+  });
+
+  it('replaces prefix _ with &: for pseudo selectors deeply', () => {
+    // Arrange
+    const theme: any = {
+      components: {
+        Button: {
+          baseStyles: {
+            color: 'green',
+            bg: 'red',
+            _hover: {
+              bg: 'pink',
+              _focus: {
+                bg: 'gray',
+              },
+            },
+          },
+        },
+      },
+    };
+
+    // Act
+    const styles: any = extractComponentStyles("Button", theme)
+
+    // Assert
+    expect(styles.color).toBe('green')
+    expect(styles['&:hover'].bg).toBe('pink')
+    expect(styles['&:hover']['&:focus'].bg).toBe('gray')
   });
 });
