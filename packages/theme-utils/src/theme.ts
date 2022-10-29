@@ -12,6 +12,12 @@ export default {
         _hover: {
           background: 'green',
         },
+        _focusVisible: {
+          border: 'red',
+          _hover: {
+            background: 'red',
+          },
+        },
       },
     },
   },

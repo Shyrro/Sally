@@ -44,4 +44,29 @@ describe('extract styles', () => {
     expect(styles['&:hover'].bg).toBe('pink')
     expect(styles['&:hover']['&:focus'].bg).toBe('gray')
   });
+
+  it("transforms pseudo selectors to kebab case", () => {
+     // Arrange
+     const theme: any = {
+      components: {
+        Button: {
+          baseStyles: {
+            _focusVisible: {
+              bg: 'pink',
+              _hover: {
+                bg: 'gray',
+              },
+            },
+          },
+        },
+      },
+    };
+
+    // Act
+    const styles: any = extractComponentStyles("Button", theme)
+
+    // Assert
+    expect(styles['&:focus-visible'].bg).toBe('pink')
+    expect(styles['&:focus-visible']['&:hover'].bg).toBe('gray')
+  })
 });
