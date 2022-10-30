@@ -4,5 +4,5 @@
 </script>
 
 <Hst.Story>
-  <STag />
+  <STag variant="outline" ></STag>
 </Hst.Story>

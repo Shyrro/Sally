@@ -1,6 +1,8 @@
 <script lang="ts">
   import { useStyle } from '@sally/theme-utils';
-  let className = useStyle("Tag")
+  export let variant: string = '';
+  console.log(variant)
+  let className = useStyle("Tag", variant)
   let hello: string = 'Hello there';
 </script>
 

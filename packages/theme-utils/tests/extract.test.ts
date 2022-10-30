@@ -37,17 +37,17 @@ describe('extract styles', () => {
     };
 
     // Act
-    const styles: any = extractComponentStyles("Button", theme)
+    const styles: any = extractComponentStyles('Button', theme);
 
     // Assert
-    expect(styles.color).toBe('green')
-    expect(styles['&:hover'].bg).toBe('pink')
-    expect(styles['&:hover']['&:focus'].bg).toBe('gray')
+    expect(styles.color).toBe('green');
+    expect(styles['&:hover'].bg).toBe('pink');
+    expect(styles['&:hover']['&:focus'].bg).toBe('gray');
   });
 
-  it("transforms pseudo selectors to kebab case", () => {
-     // Arrange
-     const theme: any = {
+  it('transforms pseudo selectors to kebab case', () => {
+    // Arrange
+    const theme: any = {
       components: {
         Button: {
           baseStyles: {
@@ -63,10 +63,45 @@ describe('extract styles', () => {
     };
 
     // Act
-    const styles: any = extractComponentStyles("Button", theme)
+    const styles: any = extractComponentStyles('Button', theme);
 
     // Assert
-    expect(styles['&:focus-visible'].bg).toBe('pink')
-    expect(styles['&:focus-visible']['&:hover'].bg).toBe('gray')
-  })
+    expect(styles['&:focus-visible'].bg).toBe('pink');
+    expect(styles['&:focus-visible']['&:hover'].bg).toBe('gray');
+  });
+
+  it('merges variants correctly', () => {
+    // Arrange
+    const theme: any = {
+      components: {
+        Button: {
+          baseStyles: {
+            bg: 'red',
+            _focusVisible: {
+              bg: 'pink',
+              _hover: {
+                bg: 'gray',
+              },
+            },
+          },
+          variants: {
+            outline: {
+              border: '4px solid red',
+              bg: 'blue',
+            },
+          },
+        },
+      },
+    };
+
+    // Act
+    const styles: any = extractComponentStyles('Button', theme, "outline");
+
+    // Assert
+    expect(styles['&:focus-visible'].bg).toBe('pink');
+    expect(styles['&:focus-visible']['&:hover'].bg).toBe('gray');
+    expect(styles.bg).toBe('blue')
+    expect(styles.border).toBe('4px solid red')
+
+  });
 });

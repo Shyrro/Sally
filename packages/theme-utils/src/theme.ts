@@ -19,6 +19,12 @@ export default {
           },
         },
       },
+      variants: {
+        outline: {
+          border: '4px solid black',
+          background: 'blue',
+        },
+      },
     },
   },
 };

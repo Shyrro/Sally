@@ -1,6 +1,6 @@
 import { css } from '@emotion/css';
+import { kebabCase, merge } from 'lodash-es';
 import theme from './theme';
-import kebabCase from 'kebab-case';
 export { default as theme } from './theme';
 
 export const formatStyles = (styles) => {
@@ -11,8 +11,7 @@ export const formatStyles = (styles) => {
       styles[value] = formatStyles(styles[value]);
     }
     if (value.startsWith('_')) {
-      const kebabCaseValue = kebabCase(value);
-      transformedStyles[kebabCaseValue.replace('_', '&:')] = styles[value];
+      transformedStyles[`&:${kebabCase(value)}`] = styles[value];
     } else {
       transformedStyles[value] = styles[value];
     }
@@ -23,15 +22,26 @@ export const formatStyles = (styles) => {
 
 export const extractComponentStyles = (
   componentName: string,
-  themeObject: typeof theme
+  themeObject: typeof theme,
+  variant?: string
 ) => {
-  // TODO: handle deep merge of theme baseStyles, variants, sizes
-  // Before merging, take into account default props
-  const styles = formatStyles(themeObject.components[componentName].baseStyles);
+  // TODO: handle reduced theme variables, such as "bg" instead of "background"
+  // TODO: Before merging, take into account default props
+  const componentTheme = themeObject.components[componentName];
+  const mergedStyles = {};
+  merge(
+    mergedStyles,
+    componentTheme?.baseStyles,
+    variant ? componentTheme?.variants[variant] : {},
+    componentTheme?.sizes
+  );
+  const styles = formatStyles(mergedStyles);
+
+
   return styles;
 };
 
-export const useStyle = (componentName: string) => {
-  const componentStyles = extractComponentStyles(componentName, theme);
+export const useStyle = (componentName: string, variant?: string) => {
+  const componentStyles = extractComponentStyles(componentName, theme, variant);
   return css(componentStyles);
 };

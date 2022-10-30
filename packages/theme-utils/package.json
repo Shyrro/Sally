@@ -9,6 +9,6 @@
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
-    "test": "vitest run"
+    "test": "vitest"
   }
 }
