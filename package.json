@@ -6,7 +6,7 @@
     "build": "nx run-many --target=build",
     "dev": "nx run-many --target=dev",
     "test": "nx run-many --target=test",
-    "histoire:dev": "nx run playground:serve",
+    "playground:dev": "nx run playground:serve",
     "new:component": "hygen generator component"
   },
   "private": true,

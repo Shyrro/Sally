@@ -9,7 +9,7 @@ const globals = {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    svelte({ preprocess: sveltePreprocess() }),
+    svelte(),
   ],
   build: {
     lib: {
@@ -20,10 +20,10 @@ export default defineConfig({
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ['svelte/internal', 'svelte'],
+      external: ['svelte', 'svelte/internal'],
       output: {
         globals
-      },
+      }
     },
   },
 });
