@@ -14,6 +14,7 @@
     "@nrwl/nx-cloud": "latest",
     "@sveltejs/vite-plugin-svelte": "^1.0.2",
     "@tsconfig/svelte": "^3.0.0",
+    "@types/lodash-es": "^4.17.6",
     "@unocss/core": "^0.46.0",
     "hygen": "^6.2.11",
     "nx": "15.0.1",

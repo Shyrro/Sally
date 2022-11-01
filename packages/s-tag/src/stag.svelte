@@ -14,4 +14,5 @@
 <Sally.Element
   __label="tag"
   as="button"
-  __css={styles}>{hello}</Sally.Element>
+  __css={styles}
+  onClick={(event) => handleClick(event)}>{hello}</Sally.Element>

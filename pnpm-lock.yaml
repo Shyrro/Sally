@@ -8,6 +8,7 @@ importers:
       '@nrwl/nx-cloud': latest
       '@sveltejs/vite-plugin-svelte': ^1.0.2
       '@tsconfig/svelte': ^3.0.0
+      '@types/lodash-es': ^4.17.6
       '@unocss/core': ^0.46.0
       hygen: ^6.2.11
       lodash-es: ^4.17.21
@@ -25,9 +26,10 @@ importers:
       '@emotion/css': 11.10.0
       lodash-es: 4.17.21
     devDependencies:
-      '@nrwl/nx-cloud': 15.0.0
+      '@nrwl/nx-cloud': 15.0.1
       '@sveltejs/vite-plugin-svelte': 1.0.9_svelte@3.52.0+vite@3.1.8
       '@tsconfig/svelte': 3.0.0
+      '@types/lodash-es': 4.17.6
       '@unocss/core': 0.46.0
       hygen: 6.2.11
       nx: 15.0.1
@@ -42,7 +44,10 @@ importers:
       vitest: 0.24.3
 
   packages/layout:
-    specifiers: {}
+    specifiers:
+      '@sally/theme-utils': '*'
+    dependencies:
+      '@sally/theme-utils': link:../theme-utils
 
   packages/s-tag:
     specifiers:
@@ -341,8 +346,8 @@ packages:
       - debug
     dev: true
 
-  /@nrwl/nx-cloud/15.0.0:
-    resolution: {integrity: sha512-KAYmbx8M4we9gUn14rDnt5vMz+yYwIa4xJNsByWf7mjzC4lvBVZKqFzFGaklWzp/gJN/xyNleZt/Fg64k/kF+A==}
+  /@nrwl/nx-cloud/15.0.1:
+    resolution: {integrity: sha512-EvUxiXF/t8czg6ORWRZ3bTPfUHH45Z3VMubmnBEWmcB3IOXQu25Du7KmUCEAqjqb1spuWrsWRzSxkIrpz8Xl9g==}
     hasBin: true
     dependencies:
       axios: 0.21.4
@@ -468,6 +473,16 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/lodash-es/4.17.6:
+    resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==}
+    dependencies:
+      '@types/lodash': 4.14.187
+    dev: true
+
+  /@types/lodash/4.14.187:
+    resolution: {integrity: sha512-MrO/xLXCaUgZy3y96C/iOsaIqZSeupyTImKClHunL5GrmaiII2VwvWmLBu2hwa0Kp0sV19CsyjtrTc/Fx8rg/A==}
     dev: true
 
   /@types/node/17.0.45:
