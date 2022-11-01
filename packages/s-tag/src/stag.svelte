@@ -1,9 +1,17 @@
 <script lang="ts">
   import { useStyle } from '@sally/theme-utils';
+  import { Sally } from '@sally/layout';
   export let variant: string = '';
-  console.log(variant)
-  let className = useStyle("Tag", variant)
-  let hello: string = 'Hello there';
+  let styles = useStyle('Tag', variant);
+  let hello: string = 'Hello';
+  // TODO: handle events
+
+	function handleClick(event) {
+    console.log('test', event)
+  }
 </script>
 
-<div class={className}>Test component : {hello}</div>
+<Sally.Element
+  __label="tag"
+  as="button"
+  __css={styles}>{hello}</Sally.Element>

@@ -1,4 +1,3 @@
-import { css } from '@emotion/css';
 import { kebabCase, merge } from 'lodash-es';
 import theme from './theme';
 export { default as theme } from './theme';
@@ -43,5 +42,5 @@ export const extractComponentStyles = (
 
 export const useStyle = (componentName: string, variant?: string) => {
   const componentStyles = extractComponentStyles(componentName, theme, variant);
-  return css(componentStyles);
+  return componentStyles;
 };

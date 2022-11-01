@@ -1,9 +1,9 @@
 {
-  "name": "@sally/s-button",
+  "name": "@sally/layout",
   "version": "0.0.0",
-  "main": "./dist/s-button.umd.cjs",
-  "module": "./dist/s-button.js",
-  "svelte": "./dist/s-button.js",
+  "main": "./dist/layout.umd.cjs",
+  "module": "./dist/layout.js",
+  "svelte": "./dist/layout.js",
   "author": "Shyrro <zsahmane@gmail.com>",
   "type": "module",
   "scripts": {

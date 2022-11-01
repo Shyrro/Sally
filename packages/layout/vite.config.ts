@@ -6,16 +6,15 @@ const globals = {
   'svelte/internal': 'svelte/internal',
   'svelte': 'svelte',
 };
-
 export default defineConfig({
   plugins: [
-    svelte({ preprocess: sveltePreprocess() }),
+    svelte(),
   ],
   build: {
     lib: {
       entry: 'index.ts',
-      name: 'SButton',
-      fileName: 's-button',
+      name: 'Layout',
+      fileName: 'layout',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
@@ -23,7 +22,7 @@ export default defineConfig({
       external: ['svelte/internal', 'svelte'],
       output: {
         globals
-      },
+      }
     },
   },
 });

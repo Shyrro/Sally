@@ -12,6 +12,7 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   }, 
   "dependencies": {
-    "@sally/theme-utils": "^0.0.0"
+    "@sally/theme-utils": "^0.0.0",
+    "@sally/layout": "*"
   }
 }

@@ -1,1 +1,0 @@
-# @sally/s-button Component
