@@ -10,7 +10,7 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "dependencies": {
-    "@sally/s-tag": "^0.0.0",
+    "@sally/s-tag": "workspace:*",
     "svelte-navigator": "^3.2.2"
   },
   "devDependencies": {

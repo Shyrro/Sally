@@ -12,6 +12,7 @@
   "private": true,
   "devDependencies": {
     "@nrwl/nx-cloud": "latest",
+    "@sveltejs/package": "^2.0.2",
     "@sveltejs/vite-plugin-svelte": "^1.0.2",
     "@tsconfig/svelte": "^3.0.0",
     "@types/lodash-es": "^4.17.6",
@@ -19,11 +20,11 @@
     "hygen": "^6.2.11",
     "nx": "15.0.1",
     "prettier": "^2.6.2",
-    "svelte": "^3.39.0",
-    "svelte-check": "^2.8.1",
-    "svelte-preprocess": "^4.10.7",
+    "svelte": "^3.58.0",
+    "svelte-check": "^3.1.4",
+    "svelte-preprocess": "^5.0.3",
     "tslib": "^2.4.0",
-    "typescript": "^4.6.4",
+    "typescript": "^5.0.3",
     "unocss": "^0.46.0",
     "vite": "^3.1.0",
     "vitest": "^0.24.3"

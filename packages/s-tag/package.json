@@ -1,18 +1,24 @@
 {
   "name": "@sally/s-tag",
   "version": "0.0.0",
-  "main": "./dist/s-tag.umd.cjs",
-  "module": "./dist/s-tag.js",
-  "svelte": "./dist/s-tag.js",
   "author": "Shyrro <zsahmane@gmail.com>",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "svelte": "./dist/index.js"
+    }
+  },
   "type": "module",
   "scripts": {
     "dev": "vite build --watch",
-    "build": "vite build",
+    "build": "pnpm check && svelte-package -i ./src -o ./dist",
     "check": "svelte-check --tsconfig ./tsconfig.json"
-  }, 
+  },
   "dependencies": {
-    "@sally/theme-utils": "^0.0.0",
-    "@sally/layout": "*"
+    "@sally/theme-utils": "workspace:*",
+    "@sally/layout": "workspace:*"
   }
 }

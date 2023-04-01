@@ -1,18 +1,19 @@
 <script lang="ts">
   import { useStyle } from '@sally/theme-utils';
-  import { Sally } from '@sally/layout';
+  import { Element } from '@sally/layout';
   export let variant: string = '';
   let styles = useStyle('Tag', variant);
   let hello: string = 'Hello';
   // TODO: handle events
 
-	function handleClick(event) {
-    console.log('test', event)
+  function handleClick(event) {
+    console.log('test', event);
   }
 </script>
 
-<Sally.Element
+<Element
   __label="tag"
   as="button"
   __css={styles}
-  onClick={(event) => handleClick(event)}>{hello}</Sally.Element>
+  onClick={(event) => handleClick(event)}>{hello}</Element
+>
