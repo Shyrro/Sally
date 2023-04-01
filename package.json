@@ -6,8 +6,12 @@
     "build": "nx run-many --target=build",
     "dev": "nx run-many --target=dev",
     "test": "nx run-many --target=test",
-    "playground:dev": "nx run playground:serve",
-    "new:component": "hygen generator component"
+    "playground:dev": "nx run svelte-vite:serve",
+    "kit:dev": "nx run svelte-kit:dev",
+    "new:component": "hygen generator component",
+    "clean:modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+    "clean:dist": "find . -name 'dist' -type d -prune -exec rm -rf '{}' +",
+    "clean:all": "pnpm clean:modules && pnpm clean:dist"
   },
   "private": true,
   "devDependencies": {

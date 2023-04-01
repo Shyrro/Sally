@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { STag } from '@sally/s-tag';
+  import { Tag } from '@sally/s-tag';
   import { Router, Route } from 'svelte-navigator';
 
   import Sidebar from './lib/Sidebar.svelte';
@@ -10,7 +10,7 @@
     <Sidebar />
     <div class="flex items-center justify-center w-full">
       <Route path="tag">
-        <STag />
+        <Tag />
       </Route>
       <Route path="button">
         <button>click</button>

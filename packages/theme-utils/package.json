@@ -4,7 +4,6 @@
   "description": "Utils for theme",
   "type": "module",
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
   "scripts": {
     "dev": "tsc -w",

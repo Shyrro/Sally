@@ -1,1 +1,1 @@
-export { default as STag } from './stag.svelte';
+export { default as Tag } from './tag.svelte';

@@ -2,15 +2,11 @@
   "name": "@sally/layout",
   "version": "0.0.0",
   "author": "Shyrro <zsahmane@gmail.com>",
+  "files": ["dist"],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "svelte": "./dist/index.js"
-    }
-  },
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
     "dev": "vite build --watch",

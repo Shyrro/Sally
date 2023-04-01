@@ -1,5 +1,5 @@
 import App from './App.svelte'
-import './app.css'
+import '../../shared/css/app.css'
 import 'uno.css'
 
 const app = new App({
