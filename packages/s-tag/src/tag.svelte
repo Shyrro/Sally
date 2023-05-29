@@ -1,10 +1,10 @@
 <script lang="ts">
   import { useStyle } from '@sally/theme-utils';
   import { Element } from '@sally/layout';
+  import { get_current_component } from 'svelte/internal';
   export let variant: string = '';
   let styles = useStyle('Tag', variant);
-  let hello: string = 'Hello';
-  // TODO: handle events
+  let hello: string = 'Hello';  
 
   function handleClick(event) {
     console.log('test', event);
@@ -13,7 +13,8 @@
 
 <Element
   __label="tag"
-  as="button"
+  as="span"
   __css={styles}
-  onClick={(event) => handleClick(event)}>{hello}</Element
->
+  component={get_current_component()}>
+  <slot />
+</Element>

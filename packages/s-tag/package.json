@@ -2,11 +2,7 @@
   "name": "@sally/s-tag",
   "version": "0.0.0",
   "author": "Shyrro <zsahmane@gmail.com>",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "svelte": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "main": "src/index.ts",  
   "type": "module",
   "scripts": {
     "dev": "vite build --watch",

@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "description": "Utils for theme",
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "src/index.ts",
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
